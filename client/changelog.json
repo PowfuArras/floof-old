@@ -1,0 +1,21 @@
+[{
+    "name": "Development #2",
+    "time": 1674962972337,
+    "changes": [
+        "Rewrote how mobs were configured",
+        "Added Bees",
+        "Added Ants and an Ant dimension",
+        "Added this start menu",
+        "Even more stuff I can't remember"
+    ]
+}, {
+    "name": "Development #1",
+    "time": 1674874974065,
+    "changes": [
+        "Lots of fun stuff",
+        "Spawn areas and spawn tables",
+        "Optimizations",
+        "Minor refactoring",
+        "Players spawn in the center of the map (0, 0)"
+    ]
+}]

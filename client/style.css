@@ -1,0 +1,169 @@
+:root {
+    /* Base Color Rules */
+    --gradientAccent: rgba(255, 0, 0, .5);
+
+    /* Link Button Rules */
+    --buttonColor: rgba(170, 0, 0, 1);
+    --buttonHoverColor: rgba(170, 0, 0, .75);
+
+    /* Property Rules */
+    --selectionColor: rgba(100, 0, 0, .5);
+}
+
+* {
+    font-family: 'Ubuntu';
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,-1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000,1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000,-2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    overscroll-behavior-y: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+canvas {
+    image-rendering: optimizeSpeed;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    cursor: default;
+    border: 0px;
+}
+
+#mainMenu {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 2vmin;
+    top: 2vmin;
+    display: none;
+}
+
+.link {
+    display: inline-block;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    min-width: 2vmin;
+    min-height: 2vmin;
+    padding: 2vmin;
+
+    border-radius: .5vmin;
+    transition: filter .5s;
+}
+
+#discord {
+    background-image: url(./resources/icons/discord.svg);
+    background-color: #5865F2;
+    border: .5vmin solid #4752c4;
+}
+
+#scroll {
+    background-image: url(./resources/icons/scroll.svg);
+    background-color: #9bb56b;
+    border: .5vmin solid #7e9357;
+}
+
+.link:hover {
+    filter: brightness(110%);
+}
+
+#changelog {
+    position: absolute;
+    top: 10vmin;
+    left: -100vmin;
+    max-width: 50vmin;
+    max-height: 25vmin;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    background-color: #9bb56b;
+    border: .5vmin solid #7e9357;
+    padding: 1em;
+    transition: left 1s;
+    color: white;
+    border-radius: .5vmin;
+}
+
+#changelog *,
+#changelog * * {
+    margin: .5em;
+}
+
+
+#changelog hr {
+    border-radius: .5vmin;
+    border: .5vmin solid #7e9357;
+}
+
+#changelog.active {
+    left: calc(2vmin);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#textInputContainer {
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+#textInputContainer input {
+    font-size: 27.5pt;
+    font-weight: bold;
+    width: 75%;
+    border: 5px solid black;
+    text-shadow: none;
+}
+
+#textInputContainer span {
+    font-size: x-large;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #505050;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #AAAAAA;
+}
+
+#loading {
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48pt;
+    font-weight: bold;
+    cursor: default;
+}

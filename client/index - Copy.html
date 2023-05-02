@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta id="versionHash" content="VERSION_HASH_HERE" />
+    <meta id="versionID" content="VERSION_ID_HERE" />
+    <title>floof.io</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
+
+    <meta name="apple-mobile-web-app-title" content="Floof">
+    <meta name="application-name" content="Floof">
+
+    <meta name="theme-color" content="#119911">
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- My school blocks inspect element, so this will allow me to know what errors occour -->
+    <!-- Use a personal laptop nerd -->
+    <script> window.addEventListener("error", ({ error }) => prompt(error.stack, error)); </script>
+    <script src="./js/renderPetal.js" defer></script>
+    <script src="./js/startMenu.js" defer></script>
+    <script src="./js/app.js" defer></script>
+</head>
+
+<body oncontextmenu="return false">
+    <canvas id="canvas" tabindex="0"></canvas>
+    <div id="beforeGameStart">
+        <div id="loading">Loading</div>
+        <div id="mainMenu">
+            <span class="link" onclick="void toggleChangelog()" id="scroll"></span>
+            <a class="link" href="https://discord.gg/bzvsEvG8Qg" id="discord"></a>
+        </div>
+        <div id="changelog"></div>
+        <div id="textInputContainer">
+            <span>This pretty little flower is called...</span>
+            <br />
+            <input autofocus=true id="textInput" />
+            <br />
+        </div>
+    </div>
+</body>
+
+</html>

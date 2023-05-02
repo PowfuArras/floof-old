@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Petal Rendering</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="petalRenderCanvas"></canvas>
+        <script src="./js/renderPetal.js" defer></script>
+        <script>
+            window.onload = function() {
+                for (let key in petalIcons) {
+                    if (petalIcons[key]) {
+                        document.body.appendChild(petalIcons[key]);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
